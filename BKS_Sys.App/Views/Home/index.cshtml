@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<div>
+    <table class="table table-striped">
+        <caption>API接口测试</caption>
+        <thead>
+            <tr>
+                <th>api</th>
+                <th>详情</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (ViewData["Type"] == "Index")
+            {
+                foreach (var controller in ViewData["LIST"] as List<BKS_Sys.App.Controllers.AttrMode>)
+                {
+                    <tr>
+                        <td>@controller.Description</td>
+                        <td>@controller.Template</td>
+                        <td>@Html.ActionLink("详情", "DetailList", new { ctr = @controller.Template })</td>
+                    </tr>
+                }
+            }
+
+            @if (ViewData["Type"] == "DetailList")
+            {
+                foreach (var action in ViewData["LIST"] as List<BKS_Sys.App.Controllers.AttrMode>)
+                {
+                    <tr>
+                        <td>@action.Description</td>
+                        <td>@action.Template</td>
+                        <td>@Html.ActionLink("详情", "Detail", new { detail = @action.Template })</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

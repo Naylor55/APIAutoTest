@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+@{
+    //var controller = ViewContext.RouteData.Values["controller"].ToString();
+    //var action = ViewContext.RouteData.Values["action"];
+    var apiUrl = ViewData["URL"];
+}
+<head>
+    <title></title>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //ajax异步提交
+            $("#btnReg").click(function () {
+                var inputContent = $("#inputContent").val();
+                //alert(inputContent);
+                //debugger;
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url:"@apiUrl",
+                    contentType: "application/json",
+                    data: inputContent,
+                    error: function (request) {
+                        $("#outContent").html("网络请求报错");
+                        return false;
+                    },
+                    success: function (data) {
+                        $("#outContent").html(JSON.stringify(data, undefined, 2));
+                    }
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+    <p class="bg-info">@ViewData["URL"]</p>
+    <form method="POST" action="xxx.cgi">
+        <div>
+            <textarea id="inputContent" name="MSG" style="height:300px;width:800px">
+                @RenderBody() 
+            </textarea>
+        </div>
+        <div>
+            <button id="btnReg" type="button">发送</button>
+        </div>
+        <div>
+            <textarea id="outContent" style="height:300px;width:800px"></textarea>
+        </div>
+    </form>
+</body>
+</html>
+

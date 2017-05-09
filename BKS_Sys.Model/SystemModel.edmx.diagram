@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5753787af91c402fa8f2e032ee9eb850" Name="Diagram1" ZoomLevel="108">
+        <EntityTypeShape EntityType="BookoesDBModel.Attendance" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.AttendanceMsgAlert" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.AttendanceSet" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.Company" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.Department" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.Departure" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.ExceptionLog" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.FeedBack" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.FormCategory" Width="1.5" PointX="1.5" PointY="20.625" />
+        <EntityTypeShape EntityType="BookoesDBModel.FormControl" Width="1.5" PointX="10.75" PointY="11.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.FormInfo" Width="1.5" PointX="3.75" PointY="20.25" />
+        <EntityTypeShape EntityType="BookoesDBModel.FormLayout" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.LocationCycle" Width="1.5" PointX="12.75" PointY="6.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.LocationSetting" Width="1.5" PointX="12.75" PointY="9.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.LocationSettingDetail" Width="1.5" PointX="13.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.LocusDetailHistory" Width="1.5" PointX="14.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.MapInfo" Width="1.5" PointX="14.75" PointY="12.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.Menus" Width="1.5" PointX="14.75" PointY="15.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.Position" Width="1.5" PointX="0.75" PointY="17" />
+        <EntityTypeShape EntityType="BookoesDBModel.RoleInfo" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.RoleMenu" Width="1.5" PointX="16.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.RoleUser" Width="1.5" PointX="5.75" PointY="16.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.RoleUserDisplay" Width="1.5" PointX="16.75" PointY="6.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.Station" Width="1.5" PointX="7.75" PointY="16.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.StationPerson" Width="1.5" PointX="16.75" PointY="9.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="16.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.UserInfo" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.UserRelation" Width="1.5" PointX="16.75" PointY="12.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.WorkFlowAnnex" Width="1.5" PointX="8.25" PointY="12.875" />
+        <EntityTypeShape EntityType="BookoesDBModel.WorkFlowEntrust" Width="1.5" PointX="3" PointY="14.125" />
+        <EntityTypeShape EntityType="BookoesDBModel.WorkFlowInfo" Width="1.5" PointX="0.75" PointY="1.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.WorkFlowProcess" Width="1.5" PointX="3" PointY="7" />
+        <EntityTypeShape EntityType="BookoesDBModel.WorkFlowRun" Width="1.5" PointX="6" PointY="7.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.WorkFlowRunProc" Width="1.5" PointX="8.25" PointY="7.625" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowProcess_Department" />
+        <AssociationConnector Association="BookoesDBModel.FK_FormModel_FormCategory" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowRun_FormModel" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowProcess_Position" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowEntrust_UserInfo" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowEntrust_UserInfo1" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowProcess_UserInfo" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowRun_UserInfo" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowRunProc_UserInfo" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowRunProc_UserInfo1" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowAnnex_WorkFlowRun" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowProcess_WorkFlowInfo" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowRun_WorkFlowInfo" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowRunProc_WorkFlowInfo" />
+        <AssociationConnector Association="BookoesDBModel.FK_WorkFlowRunProc_WorkFlowRun" />
+        <EntityTypeShape EntityType="BookoesDBModel.Calendar" Width="1.5" PointX="5.375" PointY="12.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.Logs" Width="1.5" PointX="17.375" PointY="15.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.LocusDetail" Width="1.5" PointX="19.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BookoesDBModel.Citys" Width="1.5" PointX="19.375" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
